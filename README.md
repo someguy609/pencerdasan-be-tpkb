@@ -295,7 +295,7 @@ Selamat, kalian berhasil membuat middleware autentikasi sederhana pertama kalian
 
 ### Database
 
-> Contoh ini akan menggunakan PostgresQL
+> Contoh ini akan menggunakan PostgreSQL
 
 Sekarang kita akan menghubungi aplikasi kita dengan sebuah basis data. Terdapat dua cara untuk melakukan hal tersebut, yakni:
 
@@ -350,7 +350,7 @@ createTable();
 Lalu query data yang dibutuhkan dengan SQL juga.
 
 ```js
-app.get('/users', async (req, res) => {
+app.get('/proker', async (req, res) => {
 	try {
 		const result = await client.query('SELECT * FROM programKerja');
 		res.json(result.rows);
