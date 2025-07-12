@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres.wlrrqtbeegyqkgekjczp:k237DtxhcBR7NKPM@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true" // change this with supabase url
+  directUrl = "postgresql://postgres.wlrrqtbeegyqkgekjczp:k237DtxhcBR7NKPM@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres" // (optional, can be used as url) change this with supabase direct url
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model ProgramKerja {
+  id    	  Int    @id @default(autoincrement())
+  name  	  String @unique
+  description String
+  @@map("program_kerja")
+}
